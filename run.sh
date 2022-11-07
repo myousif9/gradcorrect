@@ -213,6 +213,8 @@ do
     if echo $file | grep -q DIS
     then    
         echo "$file already gradient distortion corrected from scanner, skipping..."
+        echo "mkdir -p $out_folder/$folder && cp $nii $out_folder/$folder/$file"
+        mkdir -p $out_folder/$folder && cp $nii $out_folder/$folder/$file
         continue
     fi
 
